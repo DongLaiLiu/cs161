@@ -152,6 +152,13 @@ sys_reboot(int code)
 }
 
 /*
+
+Declaration of personal system call hello(); 
+
+*/
+void hello(void);
+
+/*
  * Kernel main. Boot up, then fork the menu thread; wait for a reboot
  * request, and then shut down.
  */
@@ -159,6 +166,7 @@ int
 kmain(char *arguments)
 {
 	boot();
+	hello();
 
 	menu(arguments);
 
